@@ -1,15 +1,26 @@
-﻿namespace GAME
+﻿using JuegoPRU.ViewModels;
+
+namespace JuegoPRU
 {
     public partial class App : Application
     {
-        public App()
+        private readonly CombatViewModel _combatViewModel;
+
+        public App(CombatViewModel combatViewModel)
         {
             InitializeComponent();
+            _combatViewModel = combatViewModel;
         }
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
             return new Window(new AppShell());
+        }
+
+        protected override void OnSleep()
+        {
+            base.OnSleep();
+            _combatViewModel?.StopMusic();
         }
     }
 }

@@ -1,6 +1,10 @@
 ﻿using Microsoft.Extensions.Logging;
+using Plugin.Maui.Audio;
+using JuegoPRU.Services;
+using JuegoPRU.ViewModels;
+using JuegoPRU.Views;
 
-namespace GAME
+namespace JuegoPRU
 {
     public static class MauiProgram
     {
@@ -14,6 +18,22 @@ namespace GAME
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
+
+            // Register services
+            builder.Services.AddSingleton(AudioManager.Current);
+            builder.Services.AddSingleton<DatabaseService>();
+
+            // Register ViewModels
+            builder.Services.AddSingleton<MainViewModel>();
+            builder.Services.AddSingleton<CharacterSelectionViewModel>();
+            builder.Services.AddSingleton<CombatViewModel>();
+            builder.Services.AddSingleton<StatisticsViewModel>();
+
+            // Register Views
+            builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddSingleton<CharacterSelectionPage>();
+            builder.Services.AddSingleton<CombatPage>();
+            builder.Services.AddSingleton<StatisticsPage>();
 
 #if DEBUG
     		builder.Logging.AddDebug();
