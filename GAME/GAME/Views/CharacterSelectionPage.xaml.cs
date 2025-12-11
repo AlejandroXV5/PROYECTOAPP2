@@ -1,7 +1,7 @@
-using JuegoPRU.ViewModels;
-using JuegoPRU.Models;
+using GAME.ViewModels;
+using GAME.Models;
 
-namespace JuegoPRU.Views
+namespace GAME.Views
 {
     public partial class CharacterSelectionPage : ContentPage
     {

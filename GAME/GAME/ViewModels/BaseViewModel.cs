@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace JuegoPRU.ViewModels
+namespace GAME.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {

@@ -2,10 +2,10 @@ using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Plugin.Maui.Audio;
-using JuegoPRU.Models;
-using JuegoPRU.Services;
+using GAME.Models;
+using GAME.Services;
 
-namespace JuegoPRU.ViewModels
+namespace GAME.ViewModels
 {
     public class CombatViewModel : BaseViewModel
     {

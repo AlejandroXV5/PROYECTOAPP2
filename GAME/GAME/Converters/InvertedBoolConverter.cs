@@ -1,6 +1,6 @@
 using System.Globalization;
 
-namespace JuegoPRU.Converters
+namespace GAME.Converters
 {
     public class InvertedBoolConverter : IValueConverter
     {

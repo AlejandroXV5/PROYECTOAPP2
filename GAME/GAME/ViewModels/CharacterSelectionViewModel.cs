@@ -1,9 +1,9 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
-using JuegoPRU.Models;
+using GAME.Models;
 
-namespace JuegoPRU.ViewModels
+namespace GAME.ViewModels
 {
     public class CharacterSelectionViewModel : BaseViewModel
     {

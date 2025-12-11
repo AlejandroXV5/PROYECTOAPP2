@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace JuegoPRU
+namespace GAME
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

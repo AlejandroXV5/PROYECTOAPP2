@@ -1,6 +1,6 @@
 using SQLite;
 
-namespace JuegoPRU.Models
+namespace GAME.Models
 {
     [Table("players")]
     public class Player

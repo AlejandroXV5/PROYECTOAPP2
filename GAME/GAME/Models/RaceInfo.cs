@@ -1,4 +1,4 @@
-namespace JuegoPRU.Models
+namespace GAME.Models
 {
     public class RaceInfo
     {

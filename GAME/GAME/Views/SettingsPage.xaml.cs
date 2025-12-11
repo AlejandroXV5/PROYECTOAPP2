@@ -1,6 +1,6 @@
 using Microsoft.Maui.Controls;
 
-namespace JuegoPRU.Views
+namespace GAME.Views
 {
     public partial class SettingsPage : ContentPage
     {

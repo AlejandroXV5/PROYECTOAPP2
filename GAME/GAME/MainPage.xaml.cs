@@ -1,6 +1,6 @@
-﻿using JuegoPRU.ViewModels;
+﻿using GAME.ViewModels;
 
-namespace JuegoPRU
+namespace GAME
 {
     public partial class MainPage : ContentPage
     {

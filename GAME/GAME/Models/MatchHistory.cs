@@ -1,6 +1,6 @@
 using SQLite;
 
-namespace JuegoPRU.Models
+namespace GAME.Models
 {
     [Table("match_history")]
     public class MatchHistory

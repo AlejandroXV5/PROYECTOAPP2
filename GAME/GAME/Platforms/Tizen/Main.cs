@@ -2,7 +2,7 @@ using System;
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 
-namespace JuegoPRU
+namespace GAME
 {
     internal class Program : MauiApplication
     {

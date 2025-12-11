@@ -1,9 +1,9 @@
 using System.Collections.ObjectModel;
 using System.Windows.Input;
-using JuegoPRU.Models;
-using JuegoPRU.Services;
+using GAME.Models;
+using GAME.Services;
 
-namespace JuegoPRU.ViewModels
+namespace GAME.ViewModels
 {
     public class StatisticsViewModel : BaseViewModel
     {

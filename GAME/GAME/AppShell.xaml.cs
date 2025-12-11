@@ -1,6 +1,6 @@
-using JuegoPRU.Views;
+using GAME.Views;
 
-namespace JuegoPRU
+namespace GAME
 {
     public partial class AppShell : Shell
     {

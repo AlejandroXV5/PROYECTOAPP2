@@ -1,7 +1,8 @@
+using System.ComponentModel;
 using System.Windows.Input;
-using JuegoPRU.Services;
+using GAME.Services;
 
-namespace JuegoPRU.ViewModels
+namespace GAME.ViewModels
 {
     public class SettingsViewModel : BaseViewModel
     {
@@ -12,8 +13,15 @@ namespace JuegoPRU.ViewModels
 
         public SettingsViewModel()
         {
+            LocalizationManager.Instance.PropertyChanged += OnLocalizationPropertyChanged;
+
             SetEnglishCommand = new Command(() => Localization.SetLanguage("en"));
             SetSpanishCommand = new Command(() => Localization.SetLanguage("es"));
+        }
+
+        private void OnLocalizationPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            OnPropertyChanged(nameof(Localization));
         }
     }
 }

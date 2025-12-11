@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:services="clr-namespace:JuegoPRU.Services"
-             x:Class="JuegoPRU.MainPage"
+             xmlns:services="clr-namespace:GAME.Services"
+             x:Class="GAME.MainPage"
              Title="Combat Game">
 
     <Grid>
@@ -15,12 +15,12 @@
                 HorizontalOptions="Center"
                 TextColor="White"
                 />
-            <Button Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=StartGameText}" Command="{Binding StartGameCommand}" Style="{StaticResource MenuButton}" />
-            <Button Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=ViewStatsText}" Command="{Binding ViewStatsCommand}" Style="{StaticResource MenuButton}" />
-            <Button Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayText}" Command="{Binding HowToPlayCommand}" Style="{StaticResource MenuButton}" />
-            <Button Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechnicalInfoText}" Command="{Binding TechnicalInfoCommand}" Style="{StaticResource MenuButton}" />
-            <Button Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=CreditsText}" Command="{Binding CreditsCommand}" Style="{StaticResource MenuButton}" />
-            <Button Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=SettingsText}" Command="{Binding SettingsCommand}" Style="{StaticResource MenuButton}" />
+            <Button Text="{Binding Localization.StartGameText}" Command="{Binding StartGameCommand}" Style="{StaticResource MenuButton}" />
+            <Button Text="{Binding Localization.ViewStatsText}" Command="{Binding ViewStatsCommand}" Style="{StaticResource MenuButton}" />
+            <Button Text="{Binding Localization.HowToPlayText}" Command="{Binding HowToPlayCommand}" Style="{StaticResource MenuButton}" />
+            <Button Text="{Binding Localization.TechnicalInfoText}" Command="{Binding TechnicalInfoCommand}" Style="{StaticResource MenuButton}" />
+            <Button Text="{Binding Localization.CreditsText}" Command="{Binding CreditsCommand}" Style="{StaticResource MenuButton}" />
+            <Button Text="{Binding Localization.SettingsText}" Command="{Binding SettingsCommand}" Style="{StaticResource MenuButton}" />
         </VerticalStackLayout>
     </Grid>
 

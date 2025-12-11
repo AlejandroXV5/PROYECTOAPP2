@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace JuegoPRU
+namespace GAME
 {
     public class Program
     {

@@ -1,10 +1,10 @@
 ﻿using Microsoft.Extensions.Logging;
 using Plugin.Maui.Audio;
-using JuegoPRU.Services;
-using JuegoPRU.ViewModels;
-using JuegoPRU.Views;
+using GAME.Services;
+using GAME.ViewModels;
+using GAME.Views;
 
-namespace JuegoPRU
+namespace GAME
 {
     public static class MauiProgram
     {

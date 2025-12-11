@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:services="clr-namespace:JuegoPRU.Services"
-             x:Class="JuegoPRU.Views.CreditsPage"
+             xmlns:viewmodels="clr-namespace:GAME.ViewModels"
+             x:Class="GAME.Views.CreditsPage"
              Title="Credits">
+    <ContentPage.BindingContext>
+        <viewmodels:CreditsViewModel />
+    </ContentPage.BindingContext>
+
     <VerticalStackLayout Padding="20">
-        <Label 
-            Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=CreditsTitle}"
+        <Label
+            Text="{Binding CreditsTitle}"
             FontSize="Large"
-            FontAttributes="Bold"/>
-        <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=CreditsDev}" Margin="0,10,0,0" />
-        <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=CreditsTech}" />
+            FontAttributes="Bold"
+            TextColor="Black"/>
+        <Label Text="{Binding CreditsDev}" Margin="0,10,0,0" TextColor="Black" />
+        <Label Text="{Binding CreditsTech}" TextColor="Black" />
     </VerticalStackLayout>
 </ContentPage>

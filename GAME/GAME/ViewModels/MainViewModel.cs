@@ -1,13 +1,15 @@
 using System.Collections.ObjectModel;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
-using JuegoPRU.Models;
-using JuegoPRU.Services;
+using GAME.Models;
+using GAME.Services;
 
-namespace JuegoPRU.ViewModels
+namespace GAME.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
+        public LocalizationManager Localization => LocalizationManager.Instance;
+
         public ICommand StartGameCommand { get; }
         public ICommand ViewStatsCommand { get; }
         public ICommand HowToPlayCommand { get; }
@@ -17,12 +19,19 @@ namespace JuegoPRU.ViewModels
 
         public MainViewModel()
         {
+            LocalizationManager.Instance.PropertyChanged += OnLocalizationPropertyChanged;
+
             StartGameCommand = new Command(async () => await GoToCharacterSelection());
             ViewStatsCommand = new Command(async () => await GoToStatistics());
             HowToPlayCommand = new Command(async () => await GoToHowToPlay());
             TechnicalInfoCommand = new Command(async () => await GoToTechnicalInfo());
             CreditsCommand = new Command(async () => await GoToCredits());
             SettingsCommand = new Command(async () => await Shell.Current.GoToAsync("settings"));
+        }
+
+        private void OnLocalizationPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            OnPropertyChanged(nameof(Localization));
         }
 
         private async Task GoToCharacterSelection()

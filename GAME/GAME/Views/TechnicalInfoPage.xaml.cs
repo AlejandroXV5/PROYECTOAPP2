@@ -1,4 +1,4 @@
-namespace JuegoPRU.Views;
+namespace GAME.Views;
 
 public partial class TechnicalInfoPage : ContentPage
 {
