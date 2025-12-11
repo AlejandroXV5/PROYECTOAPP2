@@ -101,7 +101,7 @@ namespace GAME.Services
                 ["HealButtonText"] = "Heal",
                 ["AdvanceButtonText"] = "Advance",
                 ["RetreatButtonText"] = "Retreat",
-                ["SurrenderButtonText"] = "Surrender",
+                ["SurrenderButtonText"] = "Abandon",
                 ["ReturnToMenuButtonText"] = "Return to Menu",
                 ["GameOverText"] = "Game Over",
                 ["CombatStartedMessage"] = "Combat started between {0} and {1}!",
@@ -109,7 +109,7 @@ namespace GAME.Services
                 ["HealMessage"] = "{0} heals for {1} HP!",
                 ["AdvanceMessage"] = "{0} advances! Distance: {1}",
                 ["RetreatMessage"] = "{0} retreats! Distance: {1}",
-                ["SurrenderMessage"] = "{0} surrenders!",
+                ["SurrenderMessage"] = "{0} abandons!",
                 ["WinnerMessage"] = "{0} wins!",
                 ["DrawMessage"] = "It's a draw!",
                 ["BleedingDamageMessage"] = "{0} takes {1} bleeding damage!",
@@ -125,6 +125,10 @@ namespace GAME.Services
                 ["StatisticsTitle"] = "Statistics",
                 ["TopPlayersTitle"] = "Top Players",
                 ["RecentMatchesTitle"] = "Recent Matches",
+                ["ResetStatisticsButtonText"] = "Reset Statistics",
+                ["ResetStatisticsTitle"] = "Reset Statistics",
+                ["ResetStatisticsMessage"] = "Are you sure you want to reset all statistics? This action cannot be undone.",
+                ["ResetStatisticsSuccess"] = "Statistics have been reset.",
                 
                 // How to Play
                 ["HowToPlayTitle"] = "How to Play",
@@ -270,12 +274,23 @@ namespace GAME.Services
                 ["AlreadyCloseTitle"] = "Ya Estás Cerca",
                 ["AlreadyCloseMessage"] = "¡No puedes avanzar más!",
                 ["OKButton"] = "OK",
+                ["YesButton"] = "Sí",
+                ["NoButton"] = "No",
+                ["SuccessTitle"] = "Éxito",
+                ["YesButton"] = "Yes",
+                ["NoButton"] = "No",
+                ["SuccessTitle"] = "Success",
+                ["ErrorTitle"] = "Error",
                 ["TurnLogFormat"] = "Turno {0}: {1}",
                 
                 // Statistics
                 ["StatisticsTitle"] = "Estadísticas",
                 ["TopPlayersTitle"] = "Mejores Jugadores",
                 ["RecentMatchesTitle"] = "Partidas Recientes",
+                ["ResetStatisticsButtonText"] = "Reiniciar Estadísticas",
+                ["ResetStatisticsTitle"] = "Reiniciar Estadísticas",
+                ["ResetStatisticsMessage"] = "¿Estás seguro de que quieres reiniciar todas las estadísticas? Esta acción no se puede deshacer.",
+                ["ResetStatisticsSuccess"] = "Las estadísticas han sido reiniciadas.",
                 
                 // How to Play
                 ["HowToPlayTitle"] = "Cómo Jugar",
@@ -449,12 +464,19 @@ namespace GAME.Services
         public string AlreadyCloseTitle => GetString("AlreadyCloseTitle");
         public string AlreadyCloseMessage => GetString("AlreadyCloseMessage");
         public string OKButton => GetString("OKButton");
+        public string YesButton => GetString("YesButton");
+        public string NoButton => GetString("NoButton");
+        public string SuccessTitle => GetString("SuccessTitle");
         public string TurnLogFormat => GetString("TurnLogFormat");
         
         // Statistics
         public string StatisticsTitle => GetString("StatisticsTitle");
         public string TopPlayersTitle => GetString("TopPlayersTitle");
         public string RecentMatchesTitle => GetString("RecentMatchesTitle");
+        public string ResetStatisticsButtonText => GetString("ResetStatisticsButtonText");
+        public string ResetStatisticsTitle => GetString("ResetStatisticsTitle");
+        public string ResetStatisticsMessage => GetString("ResetStatisticsMessage");
+        public string ResetStatisticsSuccess => GetString("ResetStatisticsSuccess");
         
         // How to Play
         public string HowToPlayTitle => GetString("HowToPlayTitle");

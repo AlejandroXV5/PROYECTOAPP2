@@ -32,6 +32,7 @@ namespace GAME.ViewModels
 
         public ICommand LoadStatisticsCommand { get; }
         public ICommand ReturnToMenuCommand { get; }
+        public ICommand ResetStatisticsCommand { get; }
 
         public StatisticsViewModel()
         {
@@ -41,9 +42,10 @@ namespace GAME.ViewModels
 
             LoadStatisticsCommand = new Command(async () => await LoadStatistics());
             ReturnToMenuCommand = new Command(async () => await ReturnToMenu());
+            ResetStatisticsCommand = new Command(async () => await ResetStatistics());
         }
 
-        private async Task LoadStatistics()
+        public async Task LoadStatistics()
         {
             try
             {
@@ -76,6 +78,34 @@ namespace GAME.ViewModels
             finally
             {
                 IsLoading = false;
+            }
+        }
+
+        private async Task ResetStatistics()
+        {
+            var loc = LocalizationManager.Instance;
+            var result = await Application.Current.MainPage.DisplayAlert(
+                loc.ResetStatisticsTitle,
+                loc.ResetStatisticsMessage,
+                loc.YesButton,
+                loc.NoButton);
+
+            if (result)
+            {
+                try
+                {
+                    await _databaseService.DeleteAllPlayers();
+                    await _databaseService.DeleteAllMatches();
+
+                    TopPlayers.Clear();
+                    RecentMatches.Clear();
+
+                    await Application.Current.MainPage.DisplayAlert(loc.SuccessTitle, loc.ResetStatisticsSuccess, loc.OKButton);
+                }
+                catch (Exception ex)
+                {
+                    await Application.Current.MainPage.DisplayAlert(loc.ErrorTitle, $"Failed to reset statistics: {ex.Message}", loc.OKButton);
+                }
             }
         }
 

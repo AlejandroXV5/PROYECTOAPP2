@@ -46,14 +46,14 @@ A fully functional turn-based fantasy combat game for Android built with .NET MA
 2. **Find the APK**: The generated APK can be found in `bin/Release/net9.0-android/publish/`.
 3. **Install on a device**:
    ```bash
-   adb install com.companyname.juegopru-Signed.apk
+   adb install com.companyname.GAME-Signed.apk
    ```
 
 ## 📸 Screenshots
 
-| Main Menu | Character Selection | Combat |
-| :---: | :---: | :---: |
-| `docs/screenshots/main_menu.png` | `docs/screenshots/character_selection.png` | `docs/screenshots/combat.png` |
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
 
 ## 🏗️ Architecture Overview
 

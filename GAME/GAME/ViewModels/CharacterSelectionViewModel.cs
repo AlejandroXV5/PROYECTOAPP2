@@ -301,8 +301,8 @@ namespace GAME.ViewModels
             var loc = Services.LocalizationManager.Instance;
             var (name, image, description) = weapon switch
             {
-                WeaponType.Shotgun => (loc.ShotgunName, "bow.png", loc.ShotgunDesc),
-                WeaponType.SniperRifle => (loc.SniperRifleName, "longsword.png", loc.SniperRifleDesc),
+                WeaponType.Shotgun => (loc.ShotgunName, "shotgun.jpg", loc.ShotgunDesc),
+                WeaponType.SniperRifle => (loc.SniperRifleName, "sniper.jpg", loc.SniperRifleDesc),
                 WeaponType.FireStaff => (loc.FireStaffName, "trident.png", loc.FireStaffDesc),
                 WeaponType.EarthStaff => (loc.EarthStaffName, "hammer.png", loc.EarthStaffDesc),
                 WeaponType.AirStaff => (loc.AirStaffName, "mini_sword.png", loc.AirStaffDesc),
@@ -310,7 +310,7 @@ namespace GAME.ViewModels
                 WeaponType.Axe => (loc.AxeName, "exe.png", loc.AxeDesc),
                 WeaponType.Hammer => (loc.HammerName, "hammer.png", loc.HammerDesc),
                 WeaponType.Fists => (loc.FistsName, "gauntlet.png", loc.FistsDesc),
-                WeaponType.Sword => (loc.SwordName, "trident.png", loc.SwordDesc),
+                WeaponType.Sword => (loc.SwordName, "sword.png", loc.SwordDesc),
                 _ => (weapon.ToString(), "dotnet_bot.png", "A trusty tool for adventuring.")
             };
 

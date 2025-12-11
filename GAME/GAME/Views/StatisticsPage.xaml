@@ -57,12 +57,21 @@
             </VerticalStackLayout>
         </Frame>
 
-        <Button Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=ReturnToMenuButtonText}" 
-                Command="{Binding ReturnToMenuCommand}"
-                BackgroundColor="#2196F3"
-                TextColor="White"
-                FontAttributes="Bold"
-                Padding="10"/>
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+            <Button Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=ResetStatisticsButtonText}"
+                    Command="{Binding ResetStatisticsCommand}"
+                    BackgroundColor="#F44336"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Padding="10"/>
+
+            <Button Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=ReturnToMenuButtonText}"
+                    Command="{Binding ReturnToMenuCommand}"
+                    BackgroundColor="#2196F3"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Padding="10"/>
+        </HorizontalStackLayout>
 
     </VerticalStackLayout>
 

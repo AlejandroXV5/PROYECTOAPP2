@@ -58,5 +58,15 @@ namespace GAME.Services
         {
             return _database.DeleteAsync(match);
         }
+
+        public Task<int> DeleteAllPlayers()
+        {
+            return _database.DeleteAllAsync<Player>();
+        }
+
+        public Task<int> DeleteAllMatches()
+        {
+            return _database.DeleteAllAsync<MatchHistory>();
+        }
     }
 }
