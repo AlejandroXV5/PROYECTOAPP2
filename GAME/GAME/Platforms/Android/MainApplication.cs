@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace GAME
+namespace JuegoPRU
 {
     [Application]
     public class MainApplication : MauiApplication
