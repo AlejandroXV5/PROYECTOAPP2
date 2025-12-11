@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:services="clr-namespace:JuegoPRU.Services"
+             x:Class="JuegoPRU.Views.TechnicalInfoPage"
+             Title="Technical Info">
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoTitle}" FontSize="Large" FontAttributes="Bold" />
+
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoStackTitle}" FontSize="Medium" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoStack1}" />
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoStack2}" />
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoStack3}" />
+
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoArchTitle}" FontSize="Medium" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoArch1}" />
+
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoDbTitle}" FontSize="Medium" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoDb1}" />
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoDb2}" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
