@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JuegoPRU.Views.RulesPage"
+             Title="Game Rules">
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+            <Label Text="Game Rules" FontSize="Large" FontAttributes="Bold" />
+
+            <Label Text="General" FontSize="Medium" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Label Text="- The game is for two players, pass-and-play." />
+            <Label Text="- Each player chooses a race and a weapon/ability." />
+            <Label Text="- The winner is the player who reduces their opponent's health to 0." />
+
+            <Label Text="Races" FontSize="Medium" FontAttributes="Bold" Margin="0,10,0,0" />
+
+            <Label Text="Humans (100 HP)" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Label Text="- Can use Shotgun or Sniper Rifle." />
+            <Label Text="- 'Eat' action recovers 40-50% of missing HP." />
+
+            <Label Text="Elves (115 HP with Water Staff)" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Label Text="- Use magic staffs: Fire, Earth, Air, or Water." />
+            <Label Text="- Water Elves have more HP and better healing." />
+
+            <Label Text="Orcs (100 HP)" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Label Text="- Use Axe (causes bleeding) or Hammer." />
+            <Label Text="- 'Potion' action heals over two turns." />
+
+            <Label Text="Beasts (100 HP)" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Label Text="- Use Fists (high damage, but self-damaging) or Sword." />
+            <Label Text="- 'Sleep' action recovers 50% of lost HP." />
+
+            <Label Text="Combat" FontSize="Medium" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Label Text="- The game is turn-based." />
+            <Label Text="- You can Move Forward, Move Backward, Attack, or Heal on your turn." />
+            <Label Text="- Some attacks are only effective at certain distances." />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

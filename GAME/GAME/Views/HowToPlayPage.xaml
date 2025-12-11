@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:services="clr-namespace:JuegoPRU.Services"
+             x:Class="JuegoPRU.Views.HowToPlayPage"
+             Title="How to Play">
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayTitle}" FontSize="Large" FontAttributes="Bold" />
+
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayMainMenuTitle}" FontSize="Medium" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayStep1}" />
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayStep2}" />
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayStep3}" />
+
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCharSelTitle}" FontSize="Medium" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCharSelStep1}" />
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCharSelStep2}" />
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCharSelStep3}" />
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCharSelStep4}" />
+            
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCombatTitle}" FontSize="Medium" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCombatStep1}" />
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCombatStep2}" />
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCombatStep3}" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
