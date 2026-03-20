@@ -273,10 +273,10 @@ namespace GAME.ViewModels
         {
             return race switch
             {
-                RaceType.Human => new List<WeaponType> { WeaponType.Shotgun, WeaponType.SniperRifle },
-                RaceType.Elf => new List<WeaponType> { WeaponType.FireStaff, WeaponType.EarthStaff, WeaponType.AirStaff, WeaponType.WaterStaff },
-                RaceType.Orc => new List<WeaponType> { WeaponType.Axe, WeaponType.Hammer },
-                RaceType.Beast => new List<WeaponType> { WeaponType.Fists, WeaponType.Sword },
+                RaceType.Human => new List<WeaponType> { WeaponType.Shotgun, WeaponType.SniperRifle, WeaponType.Crossbow },
+                RaceType.Elf => new List<WeaponType> { WeaponType.FireStaff, WeaponType.EarthStaff, WeaponType.AirStaff, WeaponType.WaterStaff, WeaponType.LightningStaff },
+                RaceType.Orc => new List<WeaponType> { WeaponType.Axe, WeaponType.Hammer, WeaponType.Mace },
+                RaceType.Beast => new List<WeaponType> { WeaponType.Fists, WeaponType.Sword, WeaponType.Claws },
                 _ => new List<WeaponType>()
             };
         }
@@ -303,14 +303,18 @@ namespace GAME.ViewModels
             {
                 WeaponType.Shotgun => (loc.ShotgunName, "shotgun.jpg", loc.ShotgunDesc),
                 WeaponType.SniperRifle => (loc.SniperRifleName, "sniper.jpg", loc.SniperRifleDesc),
-                WeaponType.FireStaff => (loc.FireStaffName, "trident.png", loc.FireStaffDesc),
-                WeaponType.EarthStaff => (loc.EarthStaffName, "hammer.png", loc.EarthStaffDesc),
-                WeaponType.AirStaff => (loc.AirStaffName, "mini_sword.png", loc.AirStaffDesc),
-                WeaponType.WaterStaff => (loc.WaterStaffName, "sword.png", loc.WaterStaffDesc),
-                WeaponType.Axe => (loc.AxeName, "exe.png", loc.AxeDesc),
-                WeaponType.Hammer => (loc.HammerName, "hammer.png", loc.HammerDesc),
-                WeaponType.Fists => (loc.FistsName, "gauntlet.png", loc.FistsDesc),
-                WeaponType.Sword => (loc.SwordName, "sword.png", loc.SwordDesc),
+                WeaponType.FireStaff => (loc.FireStaffName, "trident.jpg", loc.FireStaffDesc),
+                WeaponType.EarthStaff => (loc.EarthStaffName, "hammer.jpg", loc.EarthStaffDesc),
+                WeaponType.AirStaff => (loc.AirStaffName, "mini_sword.jpg", loc.AirStaffDesc),
+                WeaponType.WaterStaff => (loc.WaterStaffName, "sword.jpg", loc.WaterStaffDesc),
+                WeaponType.Axe => (loc.AxeName, "exe.jpg", loc.AxeDesc),
+                WeaponType.Hammer => (loc.HammerName, "hammer.jpg", loc.HammerDesc),
+                WeaponType.Fists => (loc.FistsName, "gauntlet.jpg", loc.FistsDesc),
+                WeaponType.Sword => (loc.SwordName, "sword.jpg", loc.SwordDesc),
+                WeaponType.Crossbow => (loc.CrossbowName, "crossbow.jpg", loc.CrossbowDesc),
+                WeaponType.LightningStaff => (loc.LightningStaffName, "lightning_staff.jpg", loc.LightningStaffDesc),
+                WeaponType.Mace => (loc.MaceName, "mace.jpg", loc.MaceDesc),
+                WeaponType.Claws => (loc.ClawsName, "claws.jpg", loc.ClawsDesc),
                 _ => (weapon.ToString(), "dotnet_bot.png", "A trusty tool for adventuring.")
             };
 

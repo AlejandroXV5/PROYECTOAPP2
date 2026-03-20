@@ -13,17 +13,21 @@ namespace GAME.Models
         // Human
         Shotgun,
         SniperRifle,
+        Crossbow,
         // Elf
         FireStaff,
         EarthStaff,
         AirStaff,
         WaterStaff,
+        LightningStaff,
         // Orc
         Axe,
         Hammer,
+        Mace,
         // Beast
         Fists,
-        Sword
+        Sword,
+        Claws
     }
 
     public class Character
@@ -120,6 +124,22 @@ namespace GAME.Models
                 case WeaponType.Sword:
                     damage = random.Next(1, 11);
                     break;
+                case WeaponType.Crossbow:
+                    damage = random.Next(5, 13);
+                    if (distance > 0)
+                        damage += (int)(damage * 0.2); // 20% bonus at distance
+                    break;
+                case WeaponType.LightningStaff:
+                    damage = random.Next(4, 10);
+                    if (random.NextDouble() < 0.25) // 25% chance double attack
+                        damage *= 2;
+                    break;
+                case WeaponType.Mace:
+                    damage = random.Next(3, 11);
+                    break;
+                case WeaponType.Claws:
+                    damage = random.Next(8, 16);
+                    break;
             }
 
             return Math.Max(1, damage);
@@ -142,6 +162,8 @@ namespace GAME.Models
                 case RaceType.Orc:
                     return (int)(damageToHeal * (0.25 + random.NextDouble() * 0.2)); // 25-45%
                 case RaceType.Beast:
+                    if (Weapon == WeaponType.Claws)
+                        return 0; // Claws cannot heal
                     return (int)(damageToHeal * 0.5); // 50%
                 default:
                     return 0;

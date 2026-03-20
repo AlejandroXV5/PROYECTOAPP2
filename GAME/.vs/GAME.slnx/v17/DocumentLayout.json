@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\PROYECTOAPP2\\GAME\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B6E796FE-3606-90F3-964E-FB9FC248C429}|GAME\\GAME.csproj|c:\\users\\usuario\\desktop\\proyectoapp2\\game\\game\\models\\weaponinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6E796FE-3606-90F3-964E-FB9FC248C429}|GAME\\GAME.csproj|solutionrelative:game\\models\\weaponinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6E796FE-3606-90F3-964E-FB9FC248C429}|GAME\\GAME.csproj|c:\\users\\usuario\\desktop\\proyectoapp2\\game\\game\\models\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6E796FE-3606-90F3-964E-FB9FC248C429}|GAME\\GAME.csproj|solutionrelative:game\\models\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6E796FE-3606-90F3-964E-FB9FC248C429}|GAME\\GAME.csproj|c:\\users\\usuario\\desktop\\proyectoapp2\\game\\game\\models\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6E796FE-3606-90F3-964E-FB9FC248C429}|GAME\\GAME.csproj|solutionrelative:game\\models\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WeaponInfo.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\PROYECTOAPP2\\GAME\\GAME\\Models\\WeaponInfo.cs",
+              "RelativeDocumentMoniker": "GAME\\Models\\WeaponInfo.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\PROYECTOAPP2\\GAME\\GAME\\Models\\WeaponInfo.cs",
+              "RelativeToolTip": "GAME\\Models\\WeaponInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T07:29:25.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\PROYECTOAPP2\\GAME\\GAME\\Models\\Player.cs",
+              "RelativeDocumentMoniker": "GAME\\Models\\Player.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\PROYECTOAPP2\\GAME\\GAME\\Models\\Player.cs",
+              "RelativeToolTip": "GAME\\Models\\Player.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T07:29:20.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Character.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\PROYECTOAPP2\\GAME\\GAME\\Models\\Character.cs",
+              "RelativeDocumentMoniker": "GAME\\Models\\Character.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\PROYECTOAPP2\\GAME\\GAME\\Models\\Character.cs",
+              "RelativeToolTip": "GAME\\Models\\Character.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T07:29:14.803Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

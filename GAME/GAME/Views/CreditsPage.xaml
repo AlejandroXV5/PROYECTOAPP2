@@ -4,13 +4,30 @@
              x:Class="GAME.Views.CreditsPage"
              Title="Credits">
 
-    <VerticalStackLayout Padding="20">
-        <Label
-            Text="{Binding CreditsTitle}"
-            FontSize="Large"
-            FontAttributes="Bold"
-            TextColor="Black"/>
-        <Label Text="{Binding CreditsDev}" Margin="0,10,0,0" TextColor="Black" />
-        <Label Text="{Binding CreditsTech}" TextColor="Black" />
+    <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center" HorizontalOptions="Center">
+
+        <Label Text="{Binding CreditsTitle}"
+               Style="{StaticResource PageTitle}"/>
+
+        <BoxView HeightRequest="1" Color="{StaticResource GoldDark}" Margin="20,0" />
+
+        <Frame Style="{StaticResource DarkCard}" HorizontalOptions="Center" MinimumWidthRequest="300">
+            <VerticalStackLayout Spacing="12" HorizontalOptions="Center">
+                <Label Text="{Binding CreditsDev}"
+                       TextColor="{StaticResource GoldLight}"
+                       FontSize="16"
+                       HorizontalTextAlignment="Center"/>
+                <Label Text="{Binding CreditsTech}"
+                       TextColor="{StaticResource SteelBlue}"
+                       FontSize="14"
+                       HorizontalTextAlignment="Center"/>
+            </VerticalStackLayout>
+        </Frame>
+
+        <Label Text="v1.0"
+               TextColor="{StaticResource Gray400}"
+               FontSize="12"
+               HorizontalTextAlignment="Center"/>
+
     </VerticalStackLayout>
 </ContentPage>

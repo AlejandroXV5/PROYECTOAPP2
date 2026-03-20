@@ -4,36 +4,55 @@
              x:Class="GAME.Views.RulesPage"
              Title="Game Rules">
     <ScrollView>
-        <VerticalStackLayout Padding="20">
-            <Label Text="Game Rules" FontSize="Large" FontAttributes="Bold" />
+        <VerticalStackLayout Padding="20" Spacing="15">
 
-            <Label Text="General" FontSize="Medium" FontAttributes="Bold" Margin="0,10,0,0" />
-            <Label Text="- The game is for two players, pass-and-play." />
-            <Label Text="- Each player chooses a race and a weapon/ability." />
-            <Label Text="- The winner is the player who reduces their opponent's health to 0." />
+            <Label Text="Game Rules" Style="{StaticResource PageTitle}"/>
 
-            <Label Text="Races" FontSize="Medium" FontAttributes="Bold" Margin="0,10,0,0" />
+            <BoxView HeightRequest="1" Color="{StaticResource GoldDark}" Margin="20,0" />
 
-            <Label Text="Humans (100 HP)" FontAttributes="Bold" Margin="0,10,0,0" />
-            <Label Text="- Can use Shotgun or Sniper Rifle." />
-            <Label Text="- 'Eat' action recovers 40-50% of missing HP." />
+            <!-- General -->
+            <Frame Style="{StaticResource DarkCard}">
+                <VerticalStackLayout Spacing="6">
+                    <Label Text="General" Style="{StaticResource SectionHeader}"/>
+                    <Label Text="- The game is for two players, pass-and-play." />
+                    <Label Text="- Each player chooses a race and a weapon/ability." />
+                    <Label Text="- The winner is the player who reduces their opponent's health to 0." />
+                </VerticalStackLayout>
+            </Frame>
 
-            <Label Text="Elves (115 HP with Water Staff)" FontAttributes="Bold" Margin="0,10,0,0" />
-            <Label Text="- Use magic staffs: Fire, Earth, Air, or Water." />
-            <Label Text="- Water Elves have more HP and better healing." />
+            <!-- Races -->
+            <Frame Style="{StaticResource DarkCard}">
+                <VerticalStackLayout Spacing="6">
+                    <Label Text="Races" Style="{StaticResource SectionHeader}"/>
 
-            <Label Text="Orcs (100 HP)" FontAttributes="Bold" Margin="0,10,0,0" />
-            <Label Text="- Use Axe (causes bleeding) or Hammer." />
-            <Label Text="- 'Potion' action heals over two turns." />
+                    <Label Text="Humans (100 HP)" FontAttributes="Bold" TextColor="{StaticResource Gold}" Margin="0,6,0,0"/>
+                    <Label Text="- Can use Shotgun, Sniper Rifle, or Crossbow." />
+                    <Label Text="- 'Eat' action recovers 40-50% of missing HP." />
 
-            <Label Text="Beasts (100 HP)" FontAttributes="Bold" Margin="0,10,0,0" />
-            <Label Text="- Use Fists (high damage, but self-damaging) or Sword." />
-            <Label Text="- 'Sleep' action recovers 50% of lost HP." />
+                    <Label Text="Elves (115 HP with Water Staff)" FontAttributes="Bold" TextColor="{StaticResource Gold}" Margin="0,6,0,0"/>
+                    <Label Text="- Use magic staffs: Fire, Earth, Air, Water, or Lightning." />
+                    <Label Text="- Water Elves have more HP and better healing." />
 
-            <Label Text="Combat" FontSize="Medium" FontAttributes="Bold" Margin="0,10,0,0" />
-            <Label Text="- The game is turn-based." />
-            <Label Text="- You can Move Forward, Move Backward, Attack, or Heal on your turn." />
-            <Label Text="- Some attacks are only effective at certain distances." />
+                    <Label Text="Orcs (100 HP)" FontAttributes="Bold" TextColor="{StaticResource Gold}" Margin="0,6,0,0"/>
+                    <Label Text="- Use Axe (causes bleeding), Hammer, or Mace." />
+                    <Label Text="- 'Potion' action heals over two turns." />
+
+                    <Label Text="Beasts (100 HP)" FontAttributes="Bold" TextColor="{StaticResource Gold}" Margin="0,6,0,0"/>
+                    <Label Text="- Use Fists (high damage), Sword, or Claws." />
+                    <Label Text="- Claws deal high damage but cannot heal." />
+                    <Label Text="- 'Sleep' action recovers 50% of lost HP." />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Combat -->
+            <Frame Style="{StaticResource DarkCard}">
+                <VerticalStackLayout Spacing="6">
+                    <Label Text="Combat" Style="{StaticResource SectionHeader}"/>
+                    <Label Text="- The game is turn-based." />
+                    <Label Text="- You can Move Forward, Move Backward, Attack, or Heal on your turn." />
+                    <Label Text="- Some attacks are only effective at certain distances." />
+                </VerticalStackLayout>
+            </Frame>
 
         </VerticalStackLayout>
     </ScrollView>

@@ -6,101 +6,123 @@
              x:Class="GAME.Views.CharacterSelectionPage"
              Title="Character Selection">
 
-    <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="15" VerticalOptions="FillAndExpand">
+    <Grid BackgroundColor="Transparent">
+        <!-- Background Image -->
+        <Image Source="menu_background.jpg" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
 
-            <VerticalStackLayout IsVisible="{Binding IsPlayer1Turn}">
-                <Frame BorderColor="#2196F3" CornerRadius="10" Padding="15" HasShadow="True">
-                    <VerticalStackLayout Spacing="10">
-                        <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=Player1NameLabel}" FontAttributes="Bold"/>
-                        <Entry Placeholder="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=EnterPlayer1NamePlaceholder}" Text="{Binding Player1Name}"/>
-                    </VerticalStackLayout>
-                </Frame>
-            </VerticalStackLayout>
+        <!-- Dark Overlay -->
+        <BoxView Color="#CC0F0F1A" />
 
-            <VerticalStackLayout IsVisible="{Binding IsPlayer2Turn}">
-                <Frame BorderColor="#2196F3" CornerRadius="10" Padding="15" HasShadow="True">
-                    <VerticalStackLayout Spacing="10">
-                        <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=Player2NameLabel}" FontAttributes="Bold"/>
-                        <Entry Placeholder="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=EnterPlayer2NamePlaceholder}" Text="{Binding Player2Name}"/>
-                    </VerticalStackLayout>
-                </Frame>
-            </VerticalStackLayout>
+        <ScrollView>
+            <VerticalStackLayout Padding="20" Spacing="15">
 
-            <Label Text="{Binding InstructionText}"
-                   FontSize="20"
-                   FontAttributes="Bold"
-                   HorizontalTextAlignment="Center"
-                   TextColor="#2196F3"/>
-
-            <CollectionView x:Name="RaceList"
-                            ItemsSource="{Binding Races}"
-                            SelectionMode="Single"
-                            SelectedItem="{Binding SelectedRaceInfo, Mode=TwoWay}"
-                            HeightRequest="300">
-                <CollectionView.ItemsLayout>
-                    <GridItemsLayout Orientation="Vertical" Span="2" />
-                </CollectionView.ItemsLayout>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame Padding="0" Margin="5" BorderColor="Gray" CornerRadius="12">
-                            <Frame.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:CharacterSelectionViewModel}}, Path=SelectRaceCommand}"
-                                                      CommandParameter="{Binding .}" />
-                            </Frame.GestureRecognizers>
-                            <Grid>
-                                <Image Source="{Binding Image}" Aspect="AspectFill" HeightRequest="140"/>
-                                <Grid BackgroundColor="#80000000">
-                                    <VerticalStackLayout Padding="10" VerticalOptions="End">
-                                        <Label Text="{Binding Name}" TextColor="White" FontSize="18" FontAttributes="Bold" />
-                                        <Label Text="{Binding Description}" TextColor="White" FontSize="12" LineBreakMode="WordWrap" />
-                                    </VerticalStackLayout>
-                                </Grid>
-                            </Grid>
-                        </Frame>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-
-            <!-- Weapon Selection -->
-            <Frame BorderColor="#FF9800" CornerRadius="10" Padding="15" HasShadow="True">
-                <VerticalStackLayout Spacing="10">
-                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=SelectWeaponLabel}" FontAttributes="Bold"/>
-                    <CollectionView x:Name="WeaponList"
-                                    ItemsSource="{Binding AvailableWeapons}"
-                                    SelectionMode="Single"
-                                    SelectedItem="{Binding SelectedWeapon, Mode=TwoWay}"
-                                    HeightRequest="250">
-                        <CollectionView.ItemsLayout>
-                            <GridItemsLayout Orientation="Vertical" Span="2" />
-                        </CollectionView.ItemsLayout>
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <Frame Padding="8" Margin="5" BorderColor="Gray" CornerRadius="12">
-                                    <Frame.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:CharacterSelectionViewModel}}, Path=SelectWeaponCommand}"
-                                                              CommandParameter="{Binding .}" />
-                                    </Frame.GestureRecognizers>
-                                    <VerticalStackLayout Spacing="6" WidthRequest="150">
-                                        <Image Source="{Binding Image}" HeightRequest="90" Aspect="AspectFill"/>
-                                        <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="14" />
-                                        <Label Text="{Binding Description}" FontSize="12" LineBreakMode="WordWrap" TextColor="#555"/>
-                                    </VerticalStackLayout>
-                                </Frame>
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                    </CollectionView>
+                <!-- Player 1 Name Entry -->
+                <VerticalStackLayout IsVisible="{Binding IsPlayer1Turn}">
+                    <Frame Style="{StaticResource DarkCard}">
+                        <VerticalStackLayout Spacing="10">
+                            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=Player1NameLabel}"
+                                   Style="{StaticResource SectionHeader}"/>
+                            <Entry Placeholder="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=EnterPlayer1NamePlaceholder}"
+                                   TextColor="{StaticResource GoldLight}"
+                                   Text="{Binding Player1Name}"/>
+                        </VerticalStackLayout>
+                    </Frame>
                 </VerticalStackLayout>
-            </Frame>
 
-            <Button Text="{Binding NextButtonText}"
-                    Command="{Binding NextCommand}"
-                    BackgroundColor="#4CAF50"
-                    TextColor="White"
-                    FontAttributes="Bold"
-                    Padding="10"/>
+                <!-- Player 2 Name Entry -->
+                <VerticalStackLayout IsVisible="{Binding IsPlayer2Turn}">
+                    <Frame Style="{StaticResource DarkCard}">
+                        <VerticalStackLayout Spacing="10">
+                            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=Player2NameLabel}"
+                                   Style="{StaticResource SectionHeader}"/>
+                            <Entry Placeholder="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=EnterPlayer2NamePlaceholder}"
+                                   TextColor="{StaticResource GoldLight}"
+                                   Text="{Binding Player2Name}"/>
+                        </VerticalStackLayout>
+                    </Frame>
+                </VerticalStackLayout>
 
-        </VerticalStackLayout>
-    </ScrollView>
+                <!-- Instruction Text -->
+                <Label Text="{Binding InstructionText}"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"
+                       TextColor="{StaticResource Gold}"/>
+
+                <!-- Race Selection -->
+                <CollectionView x:Name="RaceList"
+                                ItemsSource="{Binding Races}"
+                                SelectionMode="Single"
+                                SelectedItem="{Binding SelectedRaceInfo, Mode=TwoWay}"
+                                HeightRequest="320">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" Span="2" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Padding="0" Margin="5" BackgroundColor="{StaticResource CardBg}" BorderColor="{StaticResource GoldDark}" CornerRadius="12" HasShadow="False">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:CharacterSelectionViewModel}}, Path=SelectRaceCommand}"
+                                                          CommandParameter="{Binding .}" />
+                                </Frame.GestureRecognizers>
+                                <Grid>
+                                    <Image Source="{Binding Image}" Aspect="AspectFill" HeightRequest="150"/>
+                                    <Grid BackgroundColor="#AA0F0F1A">
+                                        <VerticalStackLayout Padding="10" VerticalOptions="End">
+                                            <Label Text="{Binding Name}" TextColor="{StaticResource Gold}" FontSize="18" FontAttributes="Bold" />
+                                            <Label Text="{Binding Description}" TextColor="{StaticResource GoldLight}" FontSize="11" LineBreakMode="WordWrap" />
+                                        </VerticalStackLayout>
+                                    </Grid>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!-- Weapon Selection -->
+                <Frame Style="{StaticResource DarkCard}">
+                    <VerticalStackLayout Spacing="10">
+                        <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=SelectWeaponLabel}"
+                               Style="{StaticResource SectionHeader}"/>
+                        <CollectionView x:Name="WeaponList"
+                                        ItemsSource="{Binding AvailableWeapons}"
+                                        SelectionMode="Single"
+                                        SelectedItem="{Binding SelectedWeapon, Mode=TwoWay}"
+                                        HeightRequest="240">
+                            <CollectionView.ItemsLayout>
+                                <GridItemsLayout Orientation="Vertical" Span="2" />
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Frame Padding="8" Margin="5" BackgroundColor="{StaticResource CardBgLight}" BorderColor="{StaticResource GoldDark}" CornerRadius="12" HasShadow="False">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:CharacterSelectionViewModel}}, Path=SelectWeaponCommand}"
+                                                                  CommandParameter="{Binding .}" />
+                                        </Frame.GestureRecognizers>
+                                        <VerticalStackLayout Spacing="4" HorizontalOptions="Center">
+                                            <Image Source="{Binding Image}" HeightRequest="85" Aspect="AspectFill"/>
+                                            <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="13" TextColor="{StaticResource Gold}" HorizontalTextAlignment="Center"/>
+                                            <Label Text="{Binding Description}" FontSize="10" LineBreakMode="WordWrap" TextColor="{StaticResource GoldLight}" HorizontalTextAlignment="Center"/>
+                                        </VerticalStackLayout>
+                                    </Frame>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Next / Start Combat Button -->
+                <Button Text="{Binding NextButtonText}"
+                        Command="{Binding NextCommand}"
+                        BackgroundColor="{StaticResource GoldDark}"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        CornerRadius="12"
+                        Padding="14"/>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
 
 </ContentPage>

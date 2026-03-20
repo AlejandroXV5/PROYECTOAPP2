@@ -5,20 +5,42 @@
              x:Class="GAME.Views.TechnicalInfoPage"
              Title="Technical Info">
     <ScrollView>
-        <VerticalStackLayout Padding="20">
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoTitle}" FontSize="Large" FontAttributes="Bold" />
+        <VerticalStackLayout Padding="20" Spacing="15">
 
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoStackTitle}" FontSize="Medium" FontAttributes="Bold" Margin="0,10,0,0" />
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoStack1}" />
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoStack2}" />
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoStack3}" />
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoTitle}"
+                   Style="{StaticResource PageTitle}"/>
 
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoArchTitle}" FontSize="Medium" FontAttributes="Bold" Margin="0,10,0,0" />
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoArch1}" />
+            <BoxView HeightRequest="1" Color="{StaticResource GoldDark}" Margin="20,0" />
 
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoDbTitle}" FontSize="Medium" FontAttributes="Bold" Margin="0,10,0,0" />
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoDb1}" />
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoDb2}" />
+            <!-- Technology Stack -->
+            <Frame Style="{StaticResource DarkCard}">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoStackTitle}"
+                           Style="{StaticResource SectionHeader}"/>
+                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoStack1}" />
+                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoStack2}" />
+                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoStack3}" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Architecture -->
+            <Frame Style="{StaticResource DarkCard}">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoArchTitle}"
+                           Style="{StaticResource SectionHeader}"/>
+                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoArch1}" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Database -->
+            <Frame Style="{StaticResource DarkCard}">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoDbTitle}"
+                           Style="{StaticResource SectionHeader}"/>
+                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoDb1}" />
+                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=TechInfoDb2}" />
+                </VerticalStackLayout>
+            </Frame>
 
         </VerticalStackLayout>
     </ScrollView>

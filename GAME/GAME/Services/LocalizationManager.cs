@@ -74,7 +74,15 @@ namespace GAME.Services
                 ["HammerDesc"] = "Heavy weapon that stuns enemies",
                 ["FistsName"] = "Fists",
                 ["FistsDesc"] = "Natural weapons, fast attacks",
-                
+                ["CrossbowName"] = "Crossbow",
+                ["CrossbowDesc"] = "Ranged weapon with 20% distance bonus",
+                ["LightningStaffName"] = "Lightning Staff",
+                ["LightningStaffDesc"] = "Lightning magic, 25% chance of double attack",
+                ["MaceName"] = "Mace",
+                ["MaceDesc"] = "Heavy weapon that causes bleeding (2 dmg x 3 turns)",
+                ["ClawsName"] = "Claws",
+                ["ClawsDesc"] = "High damage (8-15) but cannot heal",
+
                 // Button Texts
                 ["NextPlayerButtonText"] = "Next Player",
                 ["StartCombatButtonText"] = "Start Combat",
@@ -229,7 +237,15 @@ namespace GAME.Services
                 ["HammerDesc"] = "Arma pesada que aturde enemigos",
                 ["FistsName"] = "Puños",
                 ["FistsDesc"] = "Armas naturales, ataques rápidos",
-                
+                ["CrossbowName"] = "Ballesta",
+                ["CrossbowDesc"] = "Arma a distancia con 20% de bono por distancia",
+                ["LightningStaffName"] = "Bastón de Rayo",
+                ["LightningStaffDesc"] = "Magia de rayo, 25% de chance de ataque doble",
+                ["MaceName"] = "Maza",
+                ["MaceDesc"] = "Arma pesada que causa sangrado (2 daño x 3 turnos)",
+                ["ClawsName"] = "Garras",
+                ["ClawsDesc"] = "Daño alto (8-15) pero no puede curar",
+
                 // Button Texts
                 ["NextPlayerButtonText"] = "Siguiente Jugador",
                 ["StartCombatButtonText"] = "Iniciar Combate",
@@ -405,7 +421,15 @@ namespace GAME.Services
         public string HammerDesc => GetString("HammerDesc");
         public string FistsName => GetString("FistsName");
         public string FistsDesc => GetString("FistsDesc");
-        
+        public string CrossbowName => GetString("CrossbowName");
+        public string CrossbowDesc => GetString("CrossbowDesc");
+        public string LightningStaffName => GetString("LightningStaffName");
+        public string LightningStaffDesc => GetString("LightningStaffDesc");
+        public string MaceName => GetString("MaceName");
+        public string MaceDesc => GetString("MaceDesc");
+        public string ClawsName => GetString("ClawsName");
+        public string ClawsDesc => GetString("ClawsDesc");
+
         // Race Names and Descriptions
         public string HumanName => GetString("HumanName");
         public string HumanDescription => GetString("HumanDescription");

@@ -1,20 +1,36 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:services="clr-namespace:GAME.Services"
              x:Class="GAME.MainPage"
-             Title="Combat Game">
+             Title="Fantasy Combat"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="Transparent">
 
     <Grid>
-        <Image Source="inicio.png" Aspect="AspectFill" />
-        <VerticalStackLayout Padding="30,0" Spacing="20" VerticalOptions="Center">
+        <!-- Background Image -->
+        <Image Source="menu_background.jpg" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+
+        <!-- Dark Gradient Overlay (Commented out for debugging) -->
+        <!-- <BoxView Color="#800F0F1A" /> -->
+
+        <!-- Content -->
+        <VerticalStackLayout Padding="30,50" Spacing="18" VerticalOptions="Center">
+
+            <!-- Title with Shadow Effect -->
             <Label
                 Text="Fantasy Combat"
-                FontSize="48"
+                FontSize="44"
                 FontAttributes="Bold"
                 HorizontalOptions="Center"
-                TextColor="White"
-                />
+                TextColor="{StaticResource Gold}">
+                <Label.Shadow>
+                    <Shadow Brush="#80000000" Offset="3,3" Radius="6" />
+                </Label.Shadow>
+            </Label>
+
+            <BoxView HeightRequest="2" Color="{StaticResource GoldDark}" Margin="40,0" />
+
             <Button Text="{Binding Localization.StartGameText}" Command="{Binding StartGameCommand}" Style="{StaticResource MenuButton}" />
             <Button Text="{Binding Localization.ViewStatsText}" Command="{Binding ViewStatsCommand}" Style="{StaticResource MenuButton}" />
             <Button Text="{Binding Localization.HowToPlayText}" Command="{Binding HowToPlayCommand}" Style="{StaticResource MenuButton}" />

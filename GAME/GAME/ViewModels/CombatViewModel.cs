@@ -257,6 +257,12 @@ namespace GAME.ViewModels
                 defender.BleeedingDamagePerTurn = 3;
                 AddLog(string.Format(loc.IsBleedingMessage, defender.Name));
             }
+            else if (attacker.Weapon == WeaponType.Mace)
+            {
+                defender.BleeedingTurnsRemaining = 3;
+                defender.BleeedingDamagePerTurn = 2;
+                AddLog(string.Format(loc.IsBleedingMessage, defender.Name));
+            }
 
             GameState.AddAction($"{attacker.Name} attacked for {damage} damage"); // Internal action log
             GameState.CheckGameOver();
@@ -337,10 +343,12 @@ namespace GAME.ViewModels
         private bool CanAttackFromDistance(WeaponType weapon)
         {
             return weapon == WeaponType.SniperRifle ||
+                   weapon == WeaponType.Crossbow ||
                    weapon == WeaponType.FireStaff ||
                    weapon == WeaponType.EarthStaff ||
                    weapon == WeaponType.AirStaff ||
-                   weapon == WeaponType.WaterStaff;
+                   weapon == WeaponType.WaterStaff ||
+                   weapon == WeaponType.LightningStaff;
         }
 
         public void StopMusic()

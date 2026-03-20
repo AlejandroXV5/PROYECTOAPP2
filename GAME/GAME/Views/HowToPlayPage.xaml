@@ -5,24 +5,46 @@
              x:Class="GAME.Views.HowToPlayPage"
              Title="How to Play">
     <ScrollView>
-        <VerticalStackLayout Padding="20">
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayTitle}" FontSize="Large" FontAttributes="Bold" />
+        <VerticalStackLayout Padding="20" Spacing="15">
 
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayMainMenuTitle}" FontSize="Medium" FontAttributes="Bold" Margin="0,10,0,0" />
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayStep1}" />
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayStep2}" />
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayStep3}" />
+            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayTitle}"
+                   Style="{StaticResource PageTitle}"/>
 
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCharSelTitle}" FontSize="Medium" FontAttributes="Bold" Margin="0,10,0,0" />
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCharSelStep1}" />
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCharSelStep2}" />
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCharSelStep3}" />
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCharSelStep4}" />
-            
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCombatTitle}" FontSize="Medium" FontAttributes="Bold" Margin="0,10,0,0" />
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCombatStep1}" />
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCombatStep2}" />
-            <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCombatStep3}" />
+            <BoxView HeightRequest="1" Color="{StaticResource GoldDark}" Margin="20,0" />
+
+            <!-- Main Menu Section -->
+            <Frame Style="{StaticResource DarkCard}">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayMainMenuTitle}"
+                           Style="{StaticResource SectionHeader}"/>
+                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayStep1}" />
+                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayStep2}" />
+                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayStep3}" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Character Selection Section -->
+            <Frame Style="{StaticResource DarkCard}">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCharSelTitle}"
+                           Style="{StaticResource SectionHeader}"/>
+                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCharSelStep1}" />
+                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCharSelStep2}" />
+                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCharSelStep3}" />
+                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCharSelStep4}" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Combat Section -->
+            <Frame Style="{StaticResource DarkCard}">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCombatTitle}"
+                           Style="{StaticResource SectionHeader}"/>
+                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCombatStep1}" />
+                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCombatStep2}" />
+                    <Label Text="{Binding Source={x:Static services:LocalizationManager.Instance}, Path=HowToPlayCombatStep3}" />
+                </VerticalStackLayout>
+            </Frame>
 
         </VerticalStackLayout>
     </ScrollView>
